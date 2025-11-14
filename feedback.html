@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback Form</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="feedback.html">Feedback</a>
+    <a href="admin.html">Admin</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <div class="container">
+    <h1>Submit Your Feedback</h1>
+    <form id="feedbackForm" onsubmit="submitFeedback(event)">
+      <label for="name">Name:</label>
+      <input type="text" id="name" placeholder="Your name (optional)">
+
+      <label for="roll">Roll No:</label>
+      <input type="text" id="roll" placeholder="Enter your roll number">
+
+      <label for="course">Course / Class:</label>
+      <input type="text" id="course" placeholder="E.g. BCA, BSc, BA...">
+
+      <label for="teacher">Teacher Name: <span style="color:red">*</span></label>
+      <input type="text" id="teacher" required>
+
+      <label for="rating">Rate the Teacher (1–5): <span style="color:red">*</span></label>
+      <select id="rating" required>
+        <option value="">Select Rating</option>
+        <option>1 - Poor</option>
+        <option>2 - Fair</option>
+        <option>3 - Good</option>
+        <option>4 - Very Good</option>
+        <option>5 - Excellent</option>
+      </select>
+
+      <label for="comments">Comments:</label>
+      <textarea id="comments" rows="4" placeholder="Share your feedback..."></textarea>
+
+      <button type="submit">Submit Feedback</button>
+    </form>
+  </div>
+</body>
+</html>

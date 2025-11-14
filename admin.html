@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body onload="loadFeedback()">
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="feedback.html">Feedback</a>
+    <a href="admin.html">Admin</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <div class="container">
+    <h1>Admin Dashboard</h1>
+    <p>All feedback submitted by students is shown below.</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Name</th>
+          <th>Roll No</th>
+          <th>Course</th>
+          <th>Teacher</th>
+          <th>Rating</th>
+          <th>Comments</th>
+        </tr>
+      </thead>
+      <tbody id="feedbackTable"></tbody>
+    </table>
+
+    <div style="margin-top: 20px; text-align:center;">
+      <button onclick="exportCSV()">Export CSV</button>
+      <button onclick="clearFeedback()">Clear All</button>
+    </div>
+  </div>
+</body>
+</html>
